@@ -1,6 +1,5 @@
 package com.leetcode.solutions.backTracking;
 
-import com.leetcode.CommonPrint;
 import com.leetcode.solutions.SolutionInterface;
 
 import java.util.Arrays;
@@ -10,11 +9,6 @@ import java.util.List;
 public class Q47_PermutationsII implements SolutionInterface {
     @Override
     public void run() {
-        int[] nums = {1, 1, 2};
-        List<List<Integer>> res = permuteUnique(nums);
-        for (List<Integer> list : res) {
-            CommonPrint.PrintList(list);
-        }
     }
 
     //回溯。有些难度，说明见注释。
