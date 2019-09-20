@@ -7,20 +7,6 @@ public class Q31_NextPermutation implements SolutionInterface {
     public void run() {
     }
 
-    private void swap(int[] nums, int i, int j) {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-    }
-
-    private void reverse(int[] nums, int i, int j) {
-        while (i < j) {
-            swap(nums, i, j);
-            i++;
-            j--;
-        }
-    }
-
     //稍有难度，需要注意swap后的后半部分数组是降序的，只需翻转数组，不用排序。
     public void nextPermutation(int[] nums) {
         int swapPos = nums.length - 2;
@@ -39,5 +25,19 @@ public class Q31_NextPermutation implements SolutionInterface {
             }
         }
         reverse(nums, swapPos + 1, nums.length - 1);
+    }
+
+    private void swap(int[] nums, int i, int j) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+    private void reverse(int[] nums, int i, int j) {
+        while (i < j) {
+            swap(nums, i, j);
+            i++;
+            j--;
+        }
     }
 }

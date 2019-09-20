@@ -5,8 +5,6 @@ import com.leetcode.solutions.SolutionInterface;
 public class Q35_SearchInsertPosition implements SolutionInterface {
     @Override
     public void run() {
-        int[] nums = {1, 3, 5, 6};
-        System.out.println(searchInsert(nums, 5));
     }
 
     //水题。

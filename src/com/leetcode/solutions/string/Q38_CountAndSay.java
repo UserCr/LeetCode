@@ -5,7 +5,6 @@ import com.leetcode.solutions.SolutionInterface;
 public class Q38_CountAndSay implements SolutionInterface {
     @Override
     public void run() {
-        System.out.println(countAndSay(3));
     }
 
     //双缓冲水题。

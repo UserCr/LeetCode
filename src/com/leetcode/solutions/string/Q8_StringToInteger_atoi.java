@@ -5,9 +5,9 @@ import com.leetcode.solutions.SolutionInterface;
 public class Q8_StringToInteger_atoi implements SolutionInterface {
     @Override
     public void run() {
-        myAtoi("-91283472332");
     }
 
+    //注意corner case。
     public int myAtoi(String str) {
         int pos = 0;
         while (pos < str.length() && str.charAt(pos) == ' ') {

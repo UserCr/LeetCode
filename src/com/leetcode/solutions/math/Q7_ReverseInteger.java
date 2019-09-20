@@ -5,9 +5,9 @@ import com.leetcode.solutions.SolutionInterface;
 public class Q7_ReverseInteger implements SolutionInterface {
     @Override
     public void run() {
-        reverse(1534236469);
     }
 
+    //水题，注意溢出。
     public int reverse(int x) {
         int ans = 0;
         while (x != 0) {

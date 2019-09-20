@@ -23,14 +23,6 @@ public class Q17_LetterCombinationsOfAPhoneNumber implements SolutionInterface {
             {'t', 'u', 'v'},
             {'w', 'x', 'y', 'z'}};
 
-    private String recordToResString(String digits, int[] record) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < record.length; ++i) {
-            stringBuilder.append(keyboardMap[digits.charAt(i) - '0'][record[i]]);
-        }
-        return stringBuilder.toString();
-    }
-
     public List<String> letterCombinations(String digits) {
         List<String> res = new LinkedList<>();
 
@@ -44,9 +36,6 @@ public class Q17_LetterCombinationsOfAPhoneNumber implements SolutionInterface {
         }
 
         int[] record = new int[digits.length()];
-        for (int i = 0; i < record.length; ++i) {
-            record[i] = 0;
-        }
 
         for (int i = 0; i < resSize; ++i) {
             res.add(recordToResString(digits, record));
@@ -62,5 +51,13 @@ public class Q17_LetterCombinationsOfAPhoneNumber implements SolutionInterface {
             }
         }
         return res;
+    }
+
+    private String recordToResString(String digits, int[] record) {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < record.length; ++i) {
+            stringBuilder.append(keyboardMap[digits.charAt(i) - '0'][record[i]]);
+        }
+        return stringBuilder.toString();
     }
 }

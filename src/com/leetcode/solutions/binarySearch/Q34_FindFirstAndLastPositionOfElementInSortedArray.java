@@ -7,20 +7,6 @@ public class Q34_FindFirstAndLastPositionOfElementInSortedArray implements Solut
     public void run() {
     }
 
-    private int binarySearch(int[] nums, int target) {
-        for (int left = 0, right = nums.length - 1; left <= right; ) {
-            int mid = (left + right) / 2;
-            if (nums[mid] < target) {
-                left = mid + 1;
-            } else if (nums[mid] > target) {
-                right = mid - 1;
-            } else {
-                return mid;
-            }
-        }
-        return -1;
-    }
-
     //水题。二分思想的应用，不要把二分思想局限于比大小。
     public int[] searchRange(int[] nums, int target) {
         int targetPos = binarySearch(nums, target);
@@ -53,5 +39,19 @@ public class Q34_FindFirstAndLastPositionOfElementInSortedArray implements Solut
             }
         }
         return res;
+    }
+
+    private int binarySearch(int[] nums, int target) {
+        for (int left = 0, right = nums.length - 1; left <= right; ) {
+            int mid = (left + right) / 2;
+            if (nums[mid] < target) {
+                left = mid + 1;
+            } else if (nums[mid] > target) {
+                right = mid - 1;
+            } else {
+                return mid;
+            }
+        }
+        return -1;
     }
 }
