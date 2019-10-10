@@ -1,7 +1,7 @@
 package com.leetcode.solutions.tree;
 
 import com.leetcode.solutions.SolutionInterface;
-import com.leetcode.solutions.commonDataStructure.Node;
+import com.leetcode.solutions.commonDataStructure.tree.Node;
 
 public class Q116_PopulatingNextRightPointersInEachNode implements SolutionInterface {
     private interface Algorithm {
