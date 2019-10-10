@@ -1,4 +1,4 @@
-package com.leetcode.solutions.commonDataStructure;
+package com.leetcode.solutions.commonDataStructure.tree;
 
 public class Node {
     public int val;
