@@ -1,4 +1,4 @@
-package com.leetcode.solutions.hashmap;
+package com.leetcode.solutions.hashtable;
 
 import com.leetcode.solutions.SolutionInterface;
 
